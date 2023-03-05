@@ -1,16 +1,16 @@
-package com.dharbor.readwritelock;
+package com.dharbor.readwritelock.demo1;
 
 import java.util.Date;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 
-public class WriterB extends Thread{
+public class WriterA extends Thread{
 
     StringBuffer msg;
     ReadWriteLock readWriteLock;
 
-    public WriterB(StringBuffer message, ReadWriteLock readWriteLock){
-        super("writer B");
+    public WriterA(StringBuffer message, ReadWriteLock readWriteLock){
+        super("writer A");
         this.msg = message;
         this.readWriteLock = readWriteLock;
 
@@ -21,13 +21,15 @@ public class WriterB extends Thread{
             System.out.println(Thread.currentThread().getName() + " "+ new Date());
             Lock lock = readWriteLock.writeLock();
             lock.lock();
-            msg.append(" gokul");
 
+            msg.append(" saradhi");
             sleep(2000);
             lock.unlock();
-            System.out.println("writer B done");
-        } catch (InterruptedException e) {
+            System.out.println("writer A done");
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
+
     }
 }

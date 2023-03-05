@@ -1,4 +1,4 @@
-package com.dharbor.readwritelock;
+package com.dharbor.readwritelock.demo1;
 
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;

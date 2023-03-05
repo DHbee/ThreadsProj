@@ -6,16 +6,16 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Map {
 
     public static void main(String[] args) {
-        java.util.Map<String, String> concurrentMap = new HashMap<>();
-        concurrentMap.put("1", "one");
-        concurrentMap.put("2", "two");
-        concurrentMap.put("3", "three");
-        concurrentMap.put("4", "four");
+        java.util.Map<String, String> hashMap = new HashMap<>();
+        hashMap.put("1", "one");
+        hashMap.put("2", "two");
+        hashMap.put("3", "three");
+        hashMap.put("4", "four");
 
-        concurrentMap.forEach((k, v) -> {
+        hashMap.forEach((k, v) -> {
             if (k.equals("3")){
                 //it throws Exception, use concurrent hash map
-                concurrentMap.put("5","five");
+                hashMap.put("5","five");
             }
         });
 

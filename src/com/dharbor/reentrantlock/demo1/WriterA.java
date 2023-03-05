@@ -1,4 +1,4 @@
-package com.dharbor.reentrantlock;
+package com.dharbor.reentrantlock.demo1;
 
 import java.util.concurrent.locks.ReentrantLock;
 

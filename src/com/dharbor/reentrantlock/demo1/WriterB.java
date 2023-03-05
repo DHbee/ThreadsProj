@@ -1,14 +1,14 @@
-package com.dharbor.reentrantlock;
+package com.dharbor.reentrantlock.demo1;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-public class Reader extends Thread {
+public class WriterB extends Thread{
 
     PrintDemo printDemo;
     ReentrantLock reentrantLock;
 
-    public Reader(PrintDemo printDemo, ReentrantLock reentrantLock){
-        super("reader");
+    public WriterB(PrintDemo printDemo, ReentrantLock reentrantLock){
+        super("writer B");
         this.reentrantLock = reentrantLock;
         this.printDemo = printDemo;
 
@@ -20,11 +20,8 @@ public class Reader extends Thread {
             sleep(2000);
             printDemo.print(Thread.currentThread().getName());
             reentrantLock.unlock();
-
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-
     }
 }

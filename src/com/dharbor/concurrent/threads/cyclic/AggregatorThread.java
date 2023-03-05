@@ -14,6 +14,7 @@ public class AggregatorThread extends Thread {
     public void run(){
         System.out.println("Aggregator Thread name: "+ Thread.currentThread().getName());
         list.forEach( item -> {
+            System.out.println(item);
             sum = sum + item;
         });
 

@@ -1,4 +1,4 @@
-package com.dharbor.readwritelock;
+package com.dharbor.readwritelock.demo1;
 
 import java.util.Date;
 import java.util.concurrent.locks.Lock;
